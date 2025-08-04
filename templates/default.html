@@ -7,49 +7,93 @@
     <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description | default(value='Simple static site') }}{% endif %}">
     
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
+            font-family: 'Press Start 2P', monospace;
+            line-height: 1.8;
+            color: #00D9FF;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 20px;
-            background: #fff;
+            background: #1a1a2e;
+            font-size: 12px;
+        }
+        
+        .logo-container {
+            text-align: center;
+            margin: 2em 0;
+        }
+        
+        .logo-container svg {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #00D9FF;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 217, 255, 0.3);
+        }
+        
+        .catchphrase {
+            text-align: center;
+            font-family: 'Press Start 2P', monospace;
+            font-size: 18px;
+            color: #FFD93D;
+            margin: 2em 0;
+            padding: 20px;
+            background: rgba(255, 217, 61, 0.1);
+            border: 2px solid #FFD93D;
+            border-radius: 8px;
+            text-shadow: 2px 2px 0px #FF006E;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow {
+            from { text-shadow: 2px 2px 0px #FF006E, 0 0 10px rgba(255, 217, 61, 0.5); }
+            to { text-shadow: 2px 2px 0px #FF006E, 0 0 20px rgba(255, 217, 61, 0.8); }
         }
         
         h1, h2, h3, h4, h5, h6 {
-            color: #2c3e50;
+            color: #00D9FF;
             margin-top: 2em;
             margin-bottom: 0.5em;
+            text-shadow: 2px 2px 0px #FF006E;
         }
         
         h1 {
-            border-bottom: 2px solid #3498db;
+            border-bottom: 2px solid #00D9FF;
             padding-bottom: 10px;
         }
         
         a {
-            color: #3498db;
+            color: #FFD93D;
             text-decoration: none;
+            transition: all 0.3s ease;
         }
         
         a:hover {
-            text-decoration: underline;
+            color: #00FFFF;
+            text-shadow: 0 0 5px currentColor;
         }
         
         pre {
-            background: #f8f9fa;
+            background: rgba(255, 0, 110, 0.1);
             padding: 15px;
-            border-radius: 5px;
+            border-radius: 0;
             overflow-x: auto;
-            border: 1px solid #e9ecef;
+            border: 2px solid #FF006E;
+            color: #00FF88;
+            font-family: 'Press Start 2P', monospace;
+            font-size: 10px;
+            line-height: 1.6;
         }
         
         code {
-            background: #f8f9fa;
+            background: rgba(255, 0, 110, 0.2);
             padding: 2px 5px;
-            border-radius: 3px;
-            font-family: 'Monaco', 'Menlo', monospace;
+            border-radius: 0;
+            font-family: 'Press Start 2P', monospace;
+            color: #00FF88;
+            font-size: 10px;
         }
         
         pre code {
@@ -58,26 +102,99 @@
         }
         
         blockquote {
-            border-left: 4px solid #3498db;
+            border-left: 4px solid #8B00FF;
             margin: 1em 0;
             padding-left: 20px;
-            color: #666;
+            color: #00FFFF;
+            background: rgba(139, 0, 255, 0.1);
+            padding: 15px;
+        }
+        
+        ul, ol {
+            color: #00FFFF;
+        }
+        
+        li {
+            margin-bottom: 0.8em;
+        }
+        
+        p {
+            color: #FFFFFF;
+            margin-bottom: 1.5em;
         }
         
         .header {
             text-align: center;
             margin-bottom: 2em;
             padding-bottom: 1em;
-            border-bottom: 1px solid #eee;
+            border-bottom: 2px solid #00D9FF;
+            background: rgba(0, 217, 255, 0.05);
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        .header h1 {
+            color: #FFD93D;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            color: #00FFFF;
+            font-size: 10px;
         }
         
         .footer {
             margin-top: 3em;
             padding-top: 1em;
-            border-top: 1px solid #eee;
+            border-top: 2px solid #FF006E;
             text-align: center;
-            color: #666;
-            font-size: 0.9em;
+            color: #8B00FF;
+            font-size: 10px;
+            background: rgba(255, 0, 110, 0.05);
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        /* Responsive design para mobile */
+        @media (max-width: 768px) {
+            body {
+                font-size: 10px;
+                padding: 10px;
+            }
+            
+            .catchphrase {
+                font-size: 14px;
+                padding: 15px;
+            }
+            
+            .header h1 {
+                font-size: 16px;
+            }
+            
+            .logo-container svg {
+                width: 100%;
+                max-width: 500px;
+            }
+        }
+        
+        /* Efeito scanlines para toda a página */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 2px,
+                rgba(0, 217, 255, 0.02) 2px,
+                rgba(0, 217, 255, 0.02) 4px
+            );
+            pointer-events: none;
+            z-index: 1000;
         }
     </style>
 </head>

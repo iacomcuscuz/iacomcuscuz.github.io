@@ -3,34 +3,340 @@ title: Home
 layout: default
 ---
 
-# Welcome to Iacom Cuscuz
+<div class="logo-container">
+<svg width="700" height="700" viewBox="0 0 700 700" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fundo escuro estilo retro -->
+  <rect width="700" height="700" fill="#1a1a2e"/>
+  
+  <!-- Grid de pixels para efeito retro -->
+  <defs>
+    <!-- Padrão de scanlines para efeito CRT -->
+    <pattern id="scanlines" patternUnits="userSpaceOnUse" width="700" height="7">
+      <rect width="700" height="3.5" fill="rgba(255,255,255,0.02)"/>
+    </pattern>
+    
+    <!-- Gradiente para o cuscuz -->
+    <linearGradient id="cuscuzGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD93D;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F6B93B;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Gradiente neural -->
+    <radialGradient id="neuralGlow">
+      <stop offset="0%" style="stop-color:#00D9FF;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#00D9FF;stop-opacity:0" />
+    </radialGradient>
+    
+    <!-- Vinheta -->
+    <radialGradient id="vignette">
+      <stop offset="70%" style="stop-color:transparent;stop-opacity:0" />
+      <stop offset="100%" style="stop-color:black;stop-opacity:0.3" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Rede Neural Simplificada -->
+  <g id="simple-neural-network" opacity="0.6">
+    <!-- Neurônios entrada -->
+    <circle cx="105" cy="210" r="10.5" fill="#FF006E"/>
+    <circle cx="105" cy="280" r="10.5" fill="#FF006E"/>
+    <circle cx="105" cy="350" r="10.5" fill="#FF006E"/>
+    <circle cx="105" cy="420" r="10.5" fill="#FF006E"/>
+    
+    <!-- Neurônios ocultos -->
+    <circle cx="210" cy="245" r="10.5" fill="#8B00FF"/>
+    <circle cx="210" cy="315" r="10.5" fill="#8B00FF"/>
+    <circle cx="210" cy="385" r="10.5" fill="#8B00FF"/>
+    
+    <circle cx="490" cy="245" r="10.5" fill="#8B00FF"/>
+    <circle cx="490" cy="315" r="10.5" fill="#8B00FF"/>
+    <circle cx="490" cy="385" r="10.5" fill="#8B00FF"/>
+    
+    <!-- Neurônios saída -->
+    <circle cx="595" cy="210" r="10.5" fill="#00FF88"/>
+    <circle cx="595" cy="280" r="10.5" fill="#00FF88"/>
+    <circle cx="595" cy="350" r="10.5" fill="#00FF88"/>
+    <circle cx="595" cy="420" r="10.5" fill="#00FF88"/>
+    
+    <!-- Conexões simplificadas -->
+    <g stroke="#00D9FF" stroke-width="1.75" fill="none" opacity="0.4">
+      <path d="M115.5 210 L210 245 L350 280 L490 245 L584.5 210"/>
+      <path d="M115.5 280 L210 315 L350 315 L490 315 L584.5 280"/>
+      <path d="M115.5 350 L210 315 L350 315 L490 315 L584.5 350"/>
+      <path d="M115.5 420 L210 385 L350 350 L490 385 L584.5 420"/>
+      <path d="M115.5 280 L210 245 L350 280 L490 245 L584.5 280"/>
+    </g>
+  </g>
+  
+  <!-- Cuscuz estilo nordestino refatorado -->
+  <g id="cuscuz-neural">
+    <!-- Sombra do cuscuz -->
+    <ellipse cx="350" cy="420" rx="140" ry="28" fill="#0f0f1e" opacity="0.6"/>
+    
+    <!-- Base do cuscuz (formato cônico) -->
+    <!-- Camada base -->
+    <rect x="245" y="406" width="210" height="7" fill="#F4A460"/>
+    <rect x="238" y="399" width="224" height="7" fill="#FFD700"/>
+    <rect x="231" y="392" width="238" height="7" fill="#F4A460"/>
+    <rect x="224" y="385" width="252" height="7" fill="#FFD700"/>
+    
+    <!-- Corpo principal do cuscuz com textura granulada -->
+    <!-- Usando padrão de pixels para simular textura de milho -->
+    <g id="cuscuz-body">
+      <!-- Camada 1 (base) -->
+      <rect x="217" y="378" width="266" height="7" fill="#F4A460"/>
+      <rect x="220" y="378" width="3" height="7" fill="#FFD700" opacity="0.7"/>
+      <rect x="227" y="378" width="3" height="7" fill="#FFD700" opacity="0.7"/>
+      <rect x="234" y="378" width="3" height="7" fill="#FFD700" opacity="0.7"/>
+      <rect x="241" y="378" width="3" height="7" fill="#FFD700" opacity="0.7"/>
+      
+      <!-- Camada 2 -->
+      <rect x="210" y="371" width="280" height="7" fill="#FFD700"/>
+      <rect x="213" y="371" width="3" height="7" fill="#F4A460" opacity="0.7"/>
+      <rect x="220" y="371" width="3" height="7" fill="#F4A460" opacity="0.7"/>
+      <rect x="227" y="371" width="3" height="7" fill="#F4A460" opacity="0.7"/>
+      
+      <!-- Camada 3 -->
+      <rect x="217" y="364" width="266" height="7" fill="#F4A460"/>
+      <rect x="224" y="357" width="252" height="7" fill="#FFD700"/>
+      <rect x="231" y="350" width="238" height="7" fill="#F4A460"/>
+      <rect x="238" y="343" width="224" height="7" fill="#FFD700"/>
+      
+      <!-- Parte cônica média -->
+      <rect x="245" y="336" width="210" height="7" fill="#F4A460"/>
+      <rect x="252" y="329" width="196" height="7" fill="#FFD700"/>
+      <rect x="259" y="322" width="182" height="7" fill="#F4A460"/>
+      <rect x="266" y="315" width="168" height="7" fill="#FFD700"/>
+      <rect x="273" y="308" width="154" height="7" fill="#F4A460"/>
+      <rect x="280" y="301" width="140" height="7" fill="#FFD700"/>
+      <rect x="287" y="294" width="126" height="7" fill="#F4A460"/>
+      <rect x="294" y="287" width="112" height="7" fill="#FFD700"/>
+      
+      <!-- Parte superior (afunilando) -->
+      <rect x="301" y="280" width="98" height="7" fill="#F4A460"/>
+      <rect x="308" y="273" width="84" height="7" fill="#FFD700"/>
+      <rect x="315" y="266" width="70" height="7" fill="#F4A460"/>
+      <rect x="322" y="259" width="56" height="7" fill="#FFD700"/>
+      <rect x="329" y="252" width="42" height="7" fill="#F4A460"/>
+      <rect x="336" y="245" width="28" height="7" fill="#FFD700"/>
+      
+      <!-- Topo com furo central (característico da cuscuzeira) -->
+      <rect x="343" y="238" width="14" height="7" fill="#F4A460"/>
+      
+      <!-- Furo central no topo (da haste da cuscuzeira) -->
+      <rect x="346" y="231" width="8" height="7" fill="#1a1a2e" opacity="0.3"/>
+      <rect x="347" y="224" width="6" height="7" fill="#1a1a2e" opacity="0.2"/>
+    </g>
+    
+    <!-- Detalhes de textura granulada -->
+    <g id="texture-details" opacity="0.5">
+      <!-- Pequenos pixels simulando grãos de milho -->
+      <rect x="250" y="380" width="2" height="2" fill="#FFA500"/>
+      <rect x="260" y="375" width="2" height="2" fill="#FFA500"/>
+      <rect x="270" y="382" width="2" height="2" fill="#FFA500"/>
+      <rect x="280" y="370" width="2" height="2" fill="#FFA500"/>
+      <rect x="290" y="376" width="2" height="2" fill="#FFA500"/>
+      <rect x="300" y="365" width="2" height="2" fill="#FFA500"/>
+      <rect x="310" y="358" width="2" height="2" fill="#FFA500"/>
+      <rect x="320" y="348" width="2" height="2" fill="#FFA500"/>
+      <rect x="330" y="338" width="2" height="2" fill="#FFA500"/>
+      <rect x="340" y="328" width="2" height="2" fill="#FFA500"/>
+      <rect x="350" y="318" width="2" height="2" fill="#FFA500"/>
+      <rect x="360" y="308" width="2" height="2" fill="#FFA500"/>
+      <rect x="370" y="298" width="2" height="2" fill="#FFA500"/>
+      <rect x="380" y="288" width="2" height="2" fill="#FFA500"/>
+      <rect x="390" y="368" width="2" height="2" fill="#FFA500"/>
+      <rect x="400" y="358" width="2" height="2" fill="#FFA500"/>
+      <rect x="410" y="348" width="2" height="2" fill="#FFA500"/>
+      <rect x="420" y="378" width="2" height="2" fill="#FFA500"/>
+      <rect x="430" y="368" width="2" height="2" fill="#FFA500"/>
+      <rect x="440" y="358" width="2" height="2" fill="#FFA500"/>
+    </g>
+    
+    <!-- Vapor (animado) -->
+    <g id="steam" opacity="0.4">
+      <path d="M340 220 Q345 210 340 200" fill="none" stroke="#FFFFFF" stroke-width="2">
+        <animate attributeName="d" 
+                 values="M340 220 Q345 210 340 200;M342 220 Q337 210 342 200;M340 220 Q345 210 340 200" 
+                 dur="3s" 
+                 repeatCount="indefinite"/>
+        <animate attributeName="opacity" 
+                 values="0;0.4;0" 
+                 dur="3s" 
+                 repeatCount="indefinite"/>
+      </path>
+      <path d="M350 220 Q355 210 350 200" fill="none" stroke="#FFFFFF" stroke-width="2">
+        <animate attributeName="d" 
+                 values="M350 220 Q355 210 350 200;M352 220 Q347 210 352 200;M350 220 Q355 210 350 200" 
+                 dur="3.5s" 
+                 repeatCount="indefinite"/>
+        <animate attributeName="opacity" 
+                 values="0;0.3;0" 
+                 dur="3.5s" 
+                 repeatCount="indefinite"/>
+      </path>
+      <path d="M360 220 Q365 210 360 200" fill="none" stroke="#FFFFFF" stroke-width="2">
+        <animate attributeName="d" 
+                 values="M360 220 Q365 210 360 200;M362 220 Q357 210 362 200;M360 220 Q365 210 360 200" 
+                 dur="4s" 
+                 repeatCount="indefinite"/>
+        <animate attributeName="opacity" 
+                 values="0;0.35;0" 
+                 dur="4s" 
+                 repeatCount="indefinite"/>
+      </path>
+    </g>
+    
+    <!-- Manteiga derretendo no topo (opcional) -->
+    <g id="butter-melting" opacity="0.8">
+      <rect x="340" y="238" width="20" height="3" fill="#FFFF99" rx="1">
+        <animate attributeName="width" 
+                 values="20;25;20" 
+                 dur="4s" 
+                 repeatCount="indefinite"/>
+        <animate attributeName="x" 
+                 values="340;337.5;340" 
+                 dur="4s" 
+                 repeatCount="indefinite"/>
+      </rect>
+    </g>
+  </g>
+  
+  <!-- Sinal neural viajando -->
+  <g id="neural-signal">
+    <circle cx="105" cy="315" r="7" fill="#00FFFF">
+      <animate attributeName="cx" values="105;210;350;490;595" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;1;1;0" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="105" cy="280" r="7" fill="#FF00FF">
+      <animate attributeName="cx" values="105;210;350;490;595" dur="3.5s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="280;245;280;245;280" dur="3.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;1;1;0" dur="3.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Pixels flutuantes -->
+  <g id="data-pixels">
+    <rect x="140" y="140" width="14" height="14" fill="#00D9FF" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;0.3;0.8" dur="2s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="560" y="140" width="14" height="14" fill="#FF006E" opacity="0.7">
+      <animate attributeName="opacity" values="0.7;0.2;0.7" dur="2.2s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  
+  <!-- Texto IACOMCUSCUZ pixelado centralizado -->
+  <g id="text-pixelated">
+    <!-- IA em azul ciano -->
+    <g fill="#00D9FF">
+      <!-- I -->
+      <g transform="translate(97, 507)">
+        <rect x="0" y="0" width="10.5" height="56"/>
+      </g>
+      
+      <!-- A -->
+      <g transform="translate(123, 507)">
+        <rect x="0" y="10.5" width="10.5" height="45.5"/>
+        <rect x="21" y="10.5" width="10.5" height="45.5"/>
+        <rect x="0" y="0" width="31.5" height="10.5"/>
+        <rect x="0" y="24.5" width="31.5" height="10.5"/>
+      </g>
+    </g>
+    
+    <!-- COMCUSCUZ em amarelo -->
+    <g fill="#FFD93D">
+      <!-- C -->
+      <g transform="translate(173, 507)">
+        <rect x="0" y="10.5" width="10.5" height="35"/>
+        <rect x="0" y="0" width="31.5" height="10.5"/>
+        <rect x="0" y="45.5" width="31.5" height="10.5"/>
+      </g>
+      
+      <!-- O -->
+      <g transform="translate(222, 507)">
+        <rect x="0" y="10.5" width="10.5" height="35"/>
+        <rect x="21" y="10.5" width="10.5" height="35"/>
+        <rect x="0" y="0" width="31.5" height="10.5"/>
+        <rect x="0" y="45.5" width="31.5" height="10.5"/>
+      </g>
+      
+      <!-- M - letra M bem definida -->
+      <g transform="translate(271, 507)">
+        <!-- Perna esquerda -->
+        <rect x="0" y="0" width="10.5" height="56"/>
+        <!-- Perna direita -->
+        <rect x="31.5" y="0" width="10.5" height="56"/>
+        <!-- Conexão superior formando o M -->
+        <rect x="0" y="0" width="10.5" height="10.5"/>
+        <rect x="10.5" y="7" width="10.5" height="10.5"/>
+        <rect x="15.75" y="14" width="10.5" height="10.5"/>
+        <rect x="21" y="7" width="10.5" height="10.5"/>
+        <rect x="31.5" y="0" width="10.5" height="10.5"/>
+      </g>
+      
+      <!-- C -->
+      <g transform="translate(327, 507)">
+        <rect x="0" y="10.5" width="10.5" height="35"/>
+        <rect x="0" y="0" width="31.5" height="10.5"/>
+        <rect x="0" y="45.5" width="31.5" height="10.5"/>
+      </g>
+      
+      <!-- U -->
+      <g transform="translate(376, 507)">
+        <rect x="0" y="0" width="10.5" height="45.5"/>
+        <rect x="21" y="0" width="10.5" height="45.5"/>
+        <rect x="0" y="45.5" width="31.5" height="10.5"/>
+      </g>
+      
+      <!-- S -->
+      <g transform="translate(425, 507)">
+        <rect x="0" y="0" width="31.5" height="10.5"/>
+        <rect x="0" y="10.5" width="10.5" height="14"/>
+        <rect x="0" y="24.5" width="31.5" height="10.5"/>
+        <rect x="21" y="35" width="10.5" height="10.5"/>
+        <rect x="0" y="45.5" width="31.5" height="10.5"/>
+      </g>
+      
+      <!-- C -->
+      <g transform="translate(474, 507)">
+        <rect x="0" y="10.5" width="10.5" height="35"/>
+        <rect x="0" y="0" width="31.5" height="10.5"/>
+        <rect x="0" y="45.5" width="31.5" height="10.5"/>
+      </g>
+      
+      <!-- U -->
+      <g transform="translate(523, 507)">
+        <rect x="0" y="0" width="10.5" height="45.5"/>
+        <rect x="21" y="0" width="10.5" height="45.5"/>
+        <rect x="0" y="45.5" width="31.5" height="10.5"/>
+      </g>
+      
+      <!-- Z -->
+      <g transform="translate(572, 507)">
+        <rect x="0" y="0" width="31.5" height="10.5"/>
+        <rect x="21" y="10.5" width="10.5" height="10.5"/>
+        <rect x="14" y="17.5" width="10.5" height="10.5"/>
+        <rect x="10.5" y="24.5" width="10.5" height="10.5"/>
+        <rect x="3.5" y="35" width="10.5" height="10.5"/>
+        <rect x="0" y="45.5" width="31.5" height="10.5"/>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Brilho no cuscuz -->
+  <g id="sparkle">
+    <rect x="350" y="210" width="7" height="7" fill="#FFFFFF" opacity="0.8">
+      <animate attributeName="opacity" values="0;0.8;0" dur="3s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  
+  <!-- Efeito scanlines -->
+  <rect width="700" height="700" fill="url(#scanlines)" opacity="0.5"/>
+  
+  <!-- Vinheta -->
+  <rect width="700" height="700" fill="url(#vignette)"/>
+</svg>
+</div>
 
-This is a simple static site generated with Rust.
-
-## Features
-
-- ⚡ Fast static site generation
-- 🦀 Built with Rust
-- 📱 Responsive design
-- 🚀 GitHub Pages ready
-
-## Getting Started
-
-This site is automatically built and deployed using GitHub Actions whenever you push to the main branch.
-
-### Local Development
-
-To run the site generator locally:
-
-```bash
-cargo run
-```
-
-The generated site will be available in the `_site` directory.
-
-## Technology Stack
-
-- **Generator**: Custom Rust static site generator
-- **Templates**: Tera templating engine
-- **Markdown**: Pulldown-cmark parser
-- **Deployment**: GitHub Actions + GitHub Pages
+<div class="catchphrase">
+Ti aguenta, que tá vindo de jumenta!
+</div>

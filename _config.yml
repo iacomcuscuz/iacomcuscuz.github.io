@@ -1,0 +1,26 @@
+# Site settings
+title: Iacom Cuscuz
+description: >-
+  Simple static site generated with Rust
+baseurl: ""
+url: "https://iacomcuscuz.github.io"
+
+# Multilingual settings
+languages: ["en"]
+default_lang: "en"
+
+# Files to exclude from processing
+exclude:
+  - src/
+  - target/
+  - Cargo.toml
+  - Cargo.lock
+  - build.sh
+  - templates/
+  - node_modules
+  - README.md
+  - LICENSE
+
+# Site metadata
+version: "1.0.0"
+generator: "Custom Rust Static Site Generator"

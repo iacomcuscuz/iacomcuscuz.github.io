@@ -21,14 +21,17 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
         
         .logo-container {
             display: flex;
             justify-content: center;
             align-items: center;
-            flex: 1;
+            flex: 0 0 auto;
             padding: 20px;
+            margin-bottom: 20px;
         }
         
         .logo-container svg {
@@ -51,11 +54,8 @@
             border-radius: 8px;
             text-shadow: 2px 2px 0px #FF006E;
             animation: glow 2s ease-in-out infinite alternate;
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 1001;
+            flex: 0 0 auto;
+            max-width: 90%;
         }
         
         @keyframes glow {
@@ -139,10 +139,6 @@
         }
         
         .footer {
-            position: fixed;
-            bottom: 80px;
-            left: 50%;
-            transform: translateX(-50%);
             text-align: center;
             color: #8B00FF;
             font-size: 10px;
@@ -150,7 +146,8 @@
             padding: 10px 20px;
             border-radius: 8px;
             border: 1px solid #8B00FF;
-            z-index: 1002;
+            margin-top: 20px;
+            flex: 0 0 auto;
         }
         
         .footer a {
@@ -167,6 +164,7 @@
         @media (max-width: 768px) {
             body {
                 font-size: 10px;
+                padding: 10px;
             }
             
             .logo-container {
@@ -180,18 +178,15 @@
             }
             
             .catchphrase {
-                font-size: 12px;
-                padding: 10px 15px;
-                bottom: 10px;
-                left: 10px;
-                right: 10px;
-                transform: none;
+                font-size: 14px;
+                padding: 15px;
+                max-width: 95%;
             }
             
             .footer {
-                bottom: 60px;
                 font-size: 8px;
                 padding: 8px 15px;
+                margin-top: 15px;
             }
         }
         
@@ -245,14 +240,17 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
         
         .logo-container {
             display: flex;
             justify-content: center;
             align-items: center;
-            flex: 1;
+            flex: 0 0 auto;
             padding: 20px;
+            margin-bottom: 20px;
         }
         
         .logo-container svg {
@@ -275,11 +273,8 @@
             border-radius: 8px;
             text-shadow: 2px 2px 0px #FF006E;
             animation: glow 2s ease-in-out infinite alternate;
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 1001;
+            flex: 0 0 auto;
+            max-width: 90%;
         }
         
         @keyframes glow {
@@ -363,10 +358,6 @@
         }
         
         .footer {
-            position: fixed;
-            bottom: 80px;
-            left: 50%;
-            transform: translateX(-50%);
             text-align: center;
             color: #8B00FF;
             font-size: 10px;
@@ -374,7 +365,8 @@
             padding: 10px 20px;
             border-radius: 8px;
             border: 1px solid #8B00FF;
-            z-index: 1002;
+            margin-top: 20px;
+            flex: 0 0 auto;
         }
         
         .footer a {
@@ -391,6 +383,7 @@
         @media (max-width: 768px) {
             body {
                 font-size: 10px;
+                padding: 10px;
             }
             
             .logo-container {
@@ -404,18 +397,15 @@
             }
             
             .catchphrase {
-                font-size: 12px;
-                padding: 10px 15px;
-                bottom: 10px;
-                left: 10px;
-                right: 10px;
-                transform: none;
+                font-size: 14px;
+                padding: 15px;
+                max-width: 95%;
             }
             
             .footer {
-                bottom: 60px;
                 font-size: 8px;
                 padding: 8px 15px;
+                margin-top: 15px;
             }
         }
         

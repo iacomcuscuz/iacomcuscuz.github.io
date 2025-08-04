@@ -5,8 +5,8 @@
     <description>Simple static site generated with Rust</description>
     <link>https://iacomcuscuz.github.io</link>
     <atom:link href="https://iacomcuscuz.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 04 Aug 2025 16:27:39 +0000</pubDate>
-    <lastBuildDate>Mon, 04 Aug 2025 16:27:39 +0000</lastBuildDate>
+    <pubDate>Mon, 04 Aug 2025 16:44:06 +0000</pubDate>
+    <lastBuildDate>Mon, 04 Aug 2025 16:44:06 +0000</lastBuildDate>
     <generator>Iacom Cuscuz Generator</generator>
   </channel>
 </rss>

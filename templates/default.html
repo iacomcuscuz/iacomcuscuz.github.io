@@ -13,16 +13,22 @@
             font-family: 'Press Start 2P', monospace;
             line-height: 1.8;
             color: #00D9FF;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
+            max-width: 100%;
+            margin: 0;
+            padding: 0;
             background: #1a1a2e;
             font-size: 12px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
         
         .logo-container {
-            text-align: center;
-            margin: 2em 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+            padding: 20px;
         }
         
         .logo-container svg {
@@ -38,13 +44,18 @@
             font-family: 'Press Start 2P', monospace;
             font-size: 18px;
             color: #FFD93D;
-            margin: 2em 0;
+            margin: 0;
             padding: 20px;
             background: rgba(255, 217, 61, 0.1);
             border: 2px solid #FFD93D;
             border-radius: 8px;
             text-shadow: 2px 2px 0px #FF006E;
             animation: glow 2s ease-in-out infinite alternate;
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1001;
         }
         
         @keyframes glow {
@@ -124,57 +135,36 @@
         }
         
         .header {
-            text-align: center;
-            margin-bottom: 2em;
-            padding-bottom: 1em;
-            border-bottom: 2px solid #00D9FF;
-            background: rgba(0, 217, 255, 0.05);
-            padding: 20px;
-            border-radius: 8px;
-        }
-        
-        .header h1 {
-            color: #FFD93D;
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-        
-        .header p {
-            color: #00FFFF;
-            font-size: 10px;
+            display: none;
         }
         
         .footer {
-            margin-top: 3em;
-            padding-top: 1em;
-            border-top: 2px solid #FF006E;
-            text-align: center;
-            color: #8B00FF;
-            font-size: 10px;
-            background: rgba(255, 0, 110, 0.05);
-            padding: 20px;
-            border-radius: 8px;
+            display: none;
         }
         
         /* Responsive design para mobile */
         @media (max-width: 768px) {
             body {
                 font-size: 10px;
+            }
+            
+            .logo-container {
                 padding: 10px;
             }
             
-            .catchphrase {
-                font-size: 14px;
-                padding: 15px;
-            }
-            
-            .header h1 {
-                font-size: 16px;
-            }
-            
             .logo-container svg {
-                width: 100%;
+                width: 95vw;
                 max-width: 500px;
+                height: auto;
+            }
+            
+            .catchphrase {
+                font-size: 12px;
+                padding: 10px 15px;
+                bottom: 10px;
+                left: 10px;
+                right: 10px;
+                transform: none;
             }
         }
         

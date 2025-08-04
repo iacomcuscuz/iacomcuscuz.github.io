@@ -90,16 +90,23 @@ impl ContentFile {
             }
         };
 
-        // Convert markdown to HTML
-        let mut options = Options::empty();
-        options.insert(Options::ENABLE_STRIKETHROUGH);
-        options.insert(Options::ENABLE_FOOTNOTES);
-        options.insert(Options::ENABLE_TABLES);
-        options.insert(Options::ENABLE_TASKLISTS);
+        // Convert markdown to HTML or use raw HTML if it's an HTML file
+        let html_output = if path.extension().map(|e| e == "html").unwrap_or(false) {
+            // For HTML files, use content as-is
+            result.content.clone()
+        } else {
+            // For Markdown files, convert to HTML
+            let mut options = Options::empty();
+            options.insert(Options::ENABLE_STRIKETHROUGH);
+            options.insert(Options::ENABLE_FOOTNOTES);
+            options.insert(Options::ENABLE_TABLES);
+            options.insert(Options::ENABLE_TASKLISTS);
 
-        let parser = Parser::new_ext(&result.content, options);
-        let mut html_output = String::new();
-        html::push_html(&mut html_output, parser);
+            let parser = Parser::new_ext(&result.content, options);
+            let mut html_output = String::new();
+            html::push_html(&mut html_output, parser);
+            html_output
+        };
 
         // Determine collection and language from path
         let relative_path = path.strip_prefix(source_root)?.to_path_buf();

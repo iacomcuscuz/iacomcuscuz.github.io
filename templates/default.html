@@ -139,7 +139,28 @@
         }
         
         .footer {
-            display: none;
+            position: fixed;
+            bottom: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            color: #8B00FF;
+            font-size: 10px;
+            background: rgba(139, 0, 255, 0.1);
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: 1px solid #8B00FF;
+            z-index: 1002;
+        }
+        
+        .footer a {
+            color: #FFD93D;
+            text-decoration: none;
+        }
+        
+        .footer a:hover {
+            color: #00FFFF;
+            text-shadow: 0 0 5px currentColor;
         }
         
         /* Responsive design para mobile */
@@ -165,6 +186,12 @@
                 left: 10px;
                 right: 10px;
                 transform: none;
+            }
+            
+            .footer {
+                bottom: 60px;
+                font-size: 8px;
+                padding: 8px 15px;
             }
         }
         
@@ -199,7 +226,7 @@
     </main>
     
     <div class="footer">
-        <p>Generated with ❤️ using Rust</p>
+        <p>Feito com ❤️ pelo Prof. Me. <a href="https://www.linkedin.com/in/charlenopires/" target="_blank">Charleno Pires</a></p>
     </div>
 </body>
 </html>
